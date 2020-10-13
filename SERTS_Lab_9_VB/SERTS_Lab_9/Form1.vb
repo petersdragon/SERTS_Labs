@@ -78,7 +78,6 @@ Public Class Form1
             End If
         End While
     End Sub
-
     Private Sub filesList_SelectedIndexChanged(sender As Object, e As EventArgs) Handles filesList.SelectedIndexChanged
 
     End Sub
