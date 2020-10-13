@@ -1,0 +1,12 @@
+D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Lab_9_VB\SERTS_Lab_9\obj\Debug\SERTS_Lab_9.vbprojAssemblyReference.cache
+D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Lab_9_VB\SERTS_Lab_9\obj\Debug\SERTS_Lab_9.Form1.resources
+D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Lab_9_VB\SERTS_Lab_9\obj\Debug\SERTS_Lab_9.Resources.resources
+D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Lab_9_VB\SERTS_Lab_9\obj\Debug\SERTS_Lab_9.vbproj.GenerateResource.cache
+D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Lab_9_VB\SERTS_Lab_9\obj\Debug\SERTS_Lab_9.vbproj.CoreCompileInputs.cache
+D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Lab_9_VB\SERTS_Lab_9\bin\Debug\SERTS_Lab_9.exe.config
+D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Lab_9_VB\SERTS_Lab_9\bin\Debug\SERTS_Lab_9.exe
+D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Lab_9_VB\SERTS_Lab_9\bin\Debug\SERTS_Lab_9.pdb
+D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Lab_9_VB\SERTS_Lab_9\bin\Debug\SERTS_Lab_9.xml
+D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Lab_9_VB\SERTS_Lab_9\obj\Debug\SERTS_Lab_9.exe
+D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Lab_9_VB\SERTS_Lab_9\obj\Debug\SERTS_Lab_9.xml
+D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Lab_9_VB\SERTS_Lab_9\obj\Debug\SERTS_Lab_9.pdb

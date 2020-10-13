@@ -22,10 +22,48 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container()
+        Me.components = New System.ComponentModel.Container()
+        Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
+        Me.showFilesButton = New System.Windows.Forms.Button()
+        Me.filesList = New System.Windows.Forms.ListView()
+        Me.SuspendLayout()
+        '
+        'SerialPort1
+        '
+        Me.SerialPort1.PortName = "COM3"
+        '
+        'showFilesButton
+        '
+        Me.showFilesButton.Location = New System.Drawing.Point(332, 91)
+        Me.showFilesButton.Name = "showFilesButton"
+        Me.showFilesButton.Size = New System.Drawing.Size(75, 23)
+        Me.showFilesButton.TabIndex = 0
+        Me.showFilesButton.Text = "Show Files"
+        Me.showFilesButton.UseVisualStyleBackColor = True
+        '
+        'filesList
+        '
+        Me.filesList.HideSelection = False
+        Me.filesList.Location = New System.Drawing.Point(188, 120)
+        Me.filesList.Name = "filesList"
+        Me.filesList.Size = New System.Drawing.Size(367, 259)
+        Me.filesList.TabIndex = 1
+        Me.filesList.UseCompatibleStateImageBehavior = False
+        '
+        'Form1
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.filesList)
+        Me.Controls.Add(Me.showFilesButton)
+        Me.Name = "Form1"
         Me.Text = "Form1"
+        Me.ResumeLayout(False)
+
     End Sub
 
+    Friend WithEvents SerialPort1 As IO.Ports.SerialPort
+    Friend WithEvents showFilesButton As Button
+    Friend WithEvents filesList As ListView
 End Class
