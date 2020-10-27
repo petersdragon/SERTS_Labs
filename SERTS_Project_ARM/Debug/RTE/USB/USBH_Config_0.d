@@ -1,5 +1,5 @@
 RTE/USB/USBH_Config_0.o: ../RTE/USB/USBH_Config_0.c
-RTE/USB/USBH_Config_0.o: D:/Users/peter/Source/Repos/SERTS_Labs/SERTS_Lab_9_ARM/RTE/RTE_Components.h
+RTE/USB/USBH_Config_0.o: D:/Users/peter/Source/Repos/SERTS_Labs/SERTS_Project_ARM/RTE/RTE_Components.h
 RTE/USB/USBH_Config_0.o: ../RTE/USB/USBH_Config_MSC.h
 RTE/USB/USBH_Config_0.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/MDK-Middleware/7.12.0/USB/Include/usbh_config.h
 RTE/USB/USBH_Config_0.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/MDK-Middleware/7.12.0/USB/Include/usb_def.h

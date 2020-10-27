@@ -9,7 +9,7 @@ RTE/Device/STM32F407VGTx/system_stm32f4xx.o: C:/Users/peter/AppData/Local/Arm/Pa
 RTE/Device/STM32F407VGTx/system_stm32f4xx.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
 RTE/Device/STM32F407VGTx/system_stm32f4xx.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 RTE/Device/STM32F407VGTx/system_stm32f4xx.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/MDK/Templates/Inc/stm32f4xx_hal_conf.h
-RTE/Device/STM32F407VGTx/system_stm32f4xx.o: D:/Users/peter/Source/Repos/SERTS_Labs/SERTS_Lab_9_ARM/RTE/RTE_Components.h
+RTE/Device/STM32F407VGTx/system_stm32f4xx.o: D:/Users/peter/Source/Repos/SERTS_Labs/SERTS_Project_ARM/RTE/RTE_Components.h
 RTE/Device/STM32F407VGTx/system_stm32f4xx.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
 RTE/Device/STM32F407VGTx/system_stm32f4xx.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
 RTE/Device/STM32F407VGTx/system_stm32f4xx.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h

@@ -10,7 +10,7 @@ src/UART_driver.o: C:/Users/peter/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/
 src/UART_driver.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
 src/UART_driver.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 src/UART_driver.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/MDK/Templates/Inc/stm32f4xx_hal_conf.h
-src/UART_driver.o: D:/Users/peter/Source/Repos/SERTS_Labs/SERTS_Lab_9_ARM/RTE/RTE_Components.h
+src/UART_driver.o: D:/Users/peter/Source/Repos/SERTS_Labs/SERTS_Project_ARM/RTE/RTE_Components.h
 src/UART_driver.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
 src/UART_driver.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
 src/UART_driver.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h

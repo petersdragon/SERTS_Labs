@@ -21,17 +21,24 @@
 
 #define Show_Files_char "1"
 #define Read_Files_char "4"
+#define Stop_Song_char "8"
+#define Song_State_Change_char "9"
+
+
 enum commands{
   ListFiles,
   SendComplete,
-  SendFiles
+  SendFiles,
+  StopSong,
+  SongStateChange
 };
 
 // State Machine definitions
 enum state{
   NoState,
-  Idle,
-  List,
+  Stopped,
+  Playing,
+  Paused
 };
 
 void Control (void const *argument); // thread function
@@ -61,38 +68,91 @@ void Process_Event(uint16_t event) {
 		// This is an initialization state
 		// so the system will go into the initial state
 		// Next State
-		Current_State = Idle;
-		// NoState Exit actions
+		Current_State = Stopped;
+		// Exit actions
 		// Transition actions
-		// Idle state entry actions
+		// entry actions
 		LED_On(LED_Red);
 		break;
 
-	case Idle:
+	case Stopped:
 		if(event == ListFiles){
 			// Next State
-			Current_State = List;
-			// Idle state Exit actions
+			// Exit actions
+			// Transition actions
+			osMessagePut (mid_FSQueue, SendFiles, osWaitForever);
+			// entry actions
+		}
+		if(event == SongStateChange){
+			// Next State
+			Current_State = Playing;
+			// Exit actions
 			LED_Off(LED_Red);
 			// Transition actions
-			// List state entry actions
-			LED_On(LED_Blue);
-			osMessagePut (mid_FSQueue, SendFiles, osWaitForever);
+			// entry actions
+			LED_On(LED_Green);
 		}
 		break;
 
-	case List:
-		// Next State
-		Current_State = Idle;
-		// List state Exit actions
-		LED_Off(LED_Blue);
-		// Transition actions
-		// Idle state entry actions
-		LED_On(LED_Red);
+	case Playing:
+		if(event == ListFiles){
+			// Next State
+			// Exit actions
+			// Transition actions
+			osMessagePut (mid_FSQueue, SendFiles, osWaitForever);
+			// entry actions
+		}
+		if(event == SongStateChange){
+			// Next State
+			Current_State = Paused;
+			// Exit actions
+			LED_Off(LED_Green);
+			// Transition actions
+			// entry actions
+			LED_On(LED_Blue);
+		}
+		if(event == StopSong){
+			// Next State
+			Current_State = Stopped;
+			// Exit actions
+			LED_Off(LED_Green);
+			// Transition actions
+			// entry actions
+			LED_On(LED_Red);
+		}
+		break;
+	case Paused:
+		if(event == ListFiles){
+			// Next State
+			// Exit actions
+			// Transition actions
+			osMessagePut (mid_FSQueue, SendFiles, osWaitForever);
+			// entry actions
+		}
+		if(event == SongStateChange){
+			// Next State
+			Current_State = Playing;
+			// Exit actions
+			LED_Off(LED_Blue);
+			// Transition actions
+			// entry actions
+			LED_On(LED_Green);
+		}
+		if(event == StopSong){
+			// Next State
+			Current_State = Stopped;
+			// Exit actions
+			LED_Off(LED_Blue);
+			// Transition actions
+			// entry actions
+			LED_On(LED_Red);
+		}
+		break;
+
+	default:
 		break;
 	}
 }
-
 
 void Init_Thread (void) {
 
@@ -143,7 +203,14 @@ void Rx_Command (void const *argument){
       else if(!strcmp(rx_char, Read_Files_char)){
     	  char fileName[MAX];
     	  UART_receivestring(fileName, MAX); // Read file name from GUI
-    	  int i = 0;
+      }
+      else if(!strcmp(rx_char, Stop_Song_char)){
+    	  // Send Stop Command to State Machine
+          osMessagePut (mid_CMDQueue, StopSong, osWaitForever);
+      }
+      else if(!strcmp(rx_char, Song_State_Change_char)){
+    	  // Send Song_State_Change Command to State Machine
+    	  osMessagePut (mid_CMDQueue, SongStateChange, osWaitForever);
       }
 
    }
@@ -160,7 +227,6 @@ void FS_Thread(void const *arg){
 	fsFileInfo drive_info;
 	drive_info.fileID = 0;
 
-	LED_On(LED_Green);
 	ustatus = USBH_Initialize (drivenum); // initialize the USB Host
 	if (ustatus == usbOK){
 		// loop until the device is OK, may be delay from Initialize
@@ -192,7 +258,6 @@ void FS_Thread(void const *arg){
 	   }
 
 	} // end if USBH_Initialize
-	LED_Off(LED_Green);
 
 }
 

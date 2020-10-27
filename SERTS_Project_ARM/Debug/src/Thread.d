@@ -6,7 +6,7 @@ src/Thread.o: C:/Users/peter/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Drive
 src/Thread.o: C:/Users/peter/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Driver/Include/Driver_Common.h
 src/Thread.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/MDK-Middleware/7.12.0/USB/Include/rl_usb.h
 src/Thread.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/MDK-Middleware/7.12.0/USB/Include/usb_os.h
-src/Thread.o: D:/Users/peter/Source/Repos/SERTS_Labs/SERTS_Lab_9_ARM/RTE/RTE_Components.h
+src/Thread.o: D:/Users/peter/Source/Repos/SERTS_Labs/SERTS_Project_ARM/RTE/RTE_Components.h
 src/Thread.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/MDK-Middleware/7.12.0/USB/Include/usb_compiler.h
 src/Thread.o: C:/Users/peter/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include/cmsis_compiler.h
 src/Thread.o: C:/Users/peter/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Core/Include/cmsis_armcc.h

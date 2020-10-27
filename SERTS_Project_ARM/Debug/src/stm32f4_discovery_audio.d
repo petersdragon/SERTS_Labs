@@ -5,7 +5,7 @@ src/stm32f4_discovery_audio.o: ../src/audio.h
 src/stm32f4_discovery_audio.o: ../src/stm32f4_discovery.h
 src/stm32f4_discovery_audio.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 src/stm32f4_discovery_audio.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/MDK/Templates/Inc/stm32f4xx_hal_conf.h
-src/stm32f4_discovery_audio.o: D:/Users/peter/Source/Repos/SERTS_Labs/SERTS_Lab_9_ARM/RTE/RTE_Components.h
+src/stm32f4_discovery_audio.o: D:/Users/peter/Source/Repos/SERTS_Labs/SERTS_Project_ARM/RTE/RTE_Components.h
 src/stm32f4_discovery_audio.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
 src/stm32f4_discovery_audio.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
 src/stm32f4_discovery_audio.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h

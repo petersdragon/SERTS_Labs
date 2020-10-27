@@ -4,7 +4,7 @@ RTE/CMSIS_Driver/USART_STM32F4xx.o: C:/Users/peter/AppData/Local/Arm/Packs/ARM/C
 RTE/CMSIS_Driver/USART_STM32F4xx.o: C:/Users/peter/AppData/Local/Arm/Packs/ARM/CMSIS/5.7.0/CMSIS/Driver/Include/Driver_Common.h
 RTE/CMSIS_Driver/USART_STM32F4xx.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 RTE/CMSIS_Driver/USART_STM32F4xx.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/MDK/Templates/Inc/stm32f4xx_hal_conf.h
-RTE/CMSIS_Driver/USART_STM32F4xx.o: D:/Users/peter/Source/Repos/SERTS_Labs/SERTS_Lab_9_ARM/RTE/RTE_Components.h
+RTE/CMSIS_Driver/USART_STM32F4xx.o: D:/Users/peter/Source/Repos/SERTS_Labs/SERTS_Project_ARM/RTE/RTE_Components.h
 RTE/CMSIS_Driver/USART_STM32F4xx.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
 RTE/CMSIS_Driver/USART_STM32F4xx.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
 RTE/CMSIS_Driver/USART_STM32F4xx.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
@@ -34,4 +34,4 @@ RTE/CMSIS_Driver/USART_STM32F4xx.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/
 RTE/CMSIS_Driver/USART_STM32F4xx.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 RTE/CMSIS_Driver/USART_STM32F4xx.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 RTE/CMSIS_Driver/USART_STM32F4xx.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_usart.h
-RTE/CMSIS_Driver/USART_STM32F4xx.o: D:/Users/peter/Source/Repos/SERTS_Labs/SERTS_Lab_9_ARM/RTE/Device/STM32F407VGTx/RTE_Device.h
+RTE/CMSIS_Driver/USART_STM32F4xx.o: D:/Users/peter/Source/Repos/SERTS_Labs/SERTS_Project_ARM/RTE/Device/STM32F407VGTx/RTE_Device.h

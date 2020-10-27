@@ -12,6 +12,9 @@ Public Class Form1
     Dim StartFileListStr As String = "2"
     Dim EndFileListStr As String = "3"
 
+    Dim StopButtonStr As String = "8"
+    Dim ChangeStateButtonStr As String = "9"
+
     Dim b(1) As Byte
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Try to open the seial port 
@@ -81,14 +84,28 @@ Public Class Form1
         End While
     End Sub
     Private Sub filesList_SelectedIndexChanged(sender As Object, e As EventArgs) Handles filesList.SelectedIndexChanged
-
+        If Not (filesList.SelectedIndex = -1) Then
+            selectedSongLabel.Text = filesList.SelectedItem
+        End If
     End Sub
 
-    Private Sub showFilesButton_Click(sender As Object, e As EventArgs) Handles showFilesButton.Click
-
+    Private Sub refreshButton_Click(sender As Object, e As EventArgs) Handles refreshButton.Click
+        SerialPort1.Write(ShowFilesStr, 0, 1)
     End Sub
 
-    Private Sub sendFileButton_Click(sender As Object, e As EventArgs) Handles sendFileButton.Click
+    Private Sub playPauseButton_Click(sender As Object, e As EventArgs) Handles playPauseButton.Click
+        If Not (filesList.SelectedIndex = -1) Then
+            SerialPort1.Write(ChangeStateButtonStr, 0, 1)
+        End If
+    End Sub
+
+    Private Sub stopButton_Click(sender As Object, e As EventArgs) Handles stopButton.Click
+        If Not (filesList.SelectedIndex = -1) Then
+            SerialPort1.Write(StopButtonStr, 0, 1)
+        End If
+    End Sub
+
+    Private Sub selectedSongLabel_Click(sender As Object, e As EventArgs) Handles selectedSongLabel.Click
 
     End Sub
 End Class

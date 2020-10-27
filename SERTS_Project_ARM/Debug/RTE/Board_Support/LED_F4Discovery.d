@@ -1,7 +1,7 @@
 RTE/Board_Support/LED_F4Discovery.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/MDK/Boards/ST/STM32F4-Discovery/Common/LED_F4Discovery.c
 RTE/Board_Support/LED_F4Discovery.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 RTE/Board_Support/LED_F4Discovery.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/MDK/Templates/Inc/stm32f4xx_hal_conf.h
-RTE/Board_Support/LED_F4Discovery.o: D:/Users/peter/Source/Repos/SERTS_Labs/SERTS_Lab_9_ARM/RTE/RTE_Components.h
+RTE/Board_Support/LED_F4Discovery.o: D:/Users/peter/Source/Repos/SERTS_Labs/SERTS_Project_ARM/RTE/RTE_Components.h
 RTE/Board_Support/LED_F4Discovery.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
 RTE/Board_Support/LED_F4Discovery.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
 RTE/Board_Support/LED_F4Discovery.o: C:/Users/peter/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h

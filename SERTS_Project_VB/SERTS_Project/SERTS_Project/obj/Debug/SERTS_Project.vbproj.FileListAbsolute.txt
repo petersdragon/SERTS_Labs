@@ -1,0 +1,12 @@
+D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Project_VB\SERTS_Project\SERTS_Project\bin\Debug\SERTS_Project.exe.config
+D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Project_VB\SERTS_Project\SERTS_Project\bin\Debug\SERTS_Project.exe
+D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Project_VB\SERTS_Project\SERTS_Project\bin\Debug\SERTS_Project.pdb
+D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Project_VB\SERTS_Project\SERTS_Project\bin\Debug\SERTS_Project.xml
+D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Project_VB\SERTS_Project\SERTS_Project\obj\Debug\SERTS_Project.vbprojAssemblyReference.cache
+D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Project_VB\SERTS_Project\SERTS_Project\obj\Debug\SERTS_Project.Form1.resources
+D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Project_VB\SERTS_Project\SERTS_Project\obj\Debug\SERTS_Project.Resources.resources
+D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Project_VB\SERTS_Project\SERTS_Project\obj\Debug\SERTS_Project.vbproj.GenerateResource.cache
+D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Project_VB\SERTS_Project\SERTS_Project\obj\Debug\SERTS_Project.vbproj.CoreCompileInputs.cache
+D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Project_VB\SERTS_Project\SERTS_Project\obj\Debug\SERTS_Project.exe
+D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Project_VB\SERTS_Project\SERTS_Project\obj\Debug\SERTS_Project.xml
+D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Project_VB\SERTS_Project\SERTS_Project\obj\Debug\SERTS_Project.pdb

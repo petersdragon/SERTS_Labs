@@ -48,19 +48,19 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: SERTS_Lab_9_ARM.axf
+all: SERTS_Project_ARM.axf
 
 # Tool invocations
-SERTS_Lab_9_ARM.axf: $(OBJS) D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Lab_9_ARM/STM32F407VGTx.sct $(USER_OBJS) $(LIBS)
+SERTS_Project_ARM.axf: $(OBJS) D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Project_ARM/STM32F407VGTx.sct $(USER_OBJS) $(LIBS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Arm Linker 5'
-	armlink.exe --cpu=Cortex-M4.fp.sp --entry=Reset_Handler --scatter="D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Lab_9_ARM/STM32F407VGTx.sct" --info=sizes --strict -o "SERTS_Lab_9_ARM.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	armlink.exe --cpu=Cortex-M4.fp.sp --entry=Reset_Handler --scatter="D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Project_ARM/STM32F407VGTx.sct" --info=sizes --strict -o "SERTS_Project_ARM.axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(SX_DEPS) $(ASM_UPPER_DEPS) $(EXECUTABLES) $(OBJS) $(SX_UPPER_DEPS) $(ASM_DEPS) $(S_DEPS) $(S_UPPER_DEPS) $(C_DEPS) SERTS_Lab_9_ARM.axf 
+	-$(RM) $(SX_DEPS) $(ASM_UPPER_DEPS) $(EXECUTABLES) $(OBJS) $(SX_UPPER_DEPS) $(ASM_DEPS) $(S_DEPS) $(S_UPPER_DEPS) $(C_DEPS) SERTS_Project_ARM.axf 
 	-@echo ' '
 
 .PHONY: all clean dependents
