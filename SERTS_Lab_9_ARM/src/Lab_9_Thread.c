@@ -20,6 +20,7 @@
 #define LED_Blue    3
 
 #define Show_Files_char "1"
+#define Read_Files_char "4"
 enum commands{
   ListFiles,
   SendComplete,
@@ -131,12 +132,18 @@ void Control(void const *arg){
 
 void Rx_Command (void const *argument){
    char rx_char[2]={0,0};
+   int MAX = 256;
    while(1){
       UART_receive(rx_char, 1); // Wait for command from PC GUI
     // Check for the type of character received
       if(!strcmp(rx_char, Show_Files_char)){
          // Show_Files received
          osMessagePut (mid_CMDQueue, ListFiles, osWaitForever);
+      }
+      else if(!strcmp(rx_char, Read_Files_char)){
+    	  char fileName[MAX];
+    	  UART_receivestring(fileName, MAX); // Read file name from GUI
+    	  int i = 0;
       }
 
    }
@@ -178,7 +185,7 @@ void FS_Thread(void const *arg){
 		   if (evt.status == osEventMessage) { // check for valid message
 			   while (ffind("U0:*.wav", &drive_info) == fsOK) {
 					UART_send(drive_info.name, strlen(drive_info.name));
-					UART_send("\n\r", 2);
+					UART_send("\n", 1);
 			   }
 			   osMessagePut (mid_CMDQueue, SendComplete, osWaitForever);
 		   }

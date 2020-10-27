@@ -11,6 +11,8 @@ Public Class Form1
     Dim ShowFilesStr As String = "1"
     Dim StartFileListStr As String = "2"
     Dim EndFileListStr As String = "3"
+
+    Dim b(1) As Byte
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Try to open the seial port 
         Try
@@ -87,5 +89,16 @@ Public Class Form1
             ' Send Show_Files command
             SerialPort1.Write(ShowFilesStr, 0, 1)
         End If
+    End Sub
+
+    Private Sub sendFileButton_Click(sender As Object, e As EventArgs) Handles sendFileButton.Click
+        b(0) = 0
+        ' A value of negative one (-1) is returned if no item is selected
+        If Not (filesList.SelectedIndex = -1) Then
+            SerialPort1.Write("4", 0, 1)
+            SerialPort1.Write(filesList.SelectedItem)
+            SerialPort1.Write(b, 0, 1) ' New Line character at the end of the string
+        End If
+
     End Sub
 End Class

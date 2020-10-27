@@ -1,33 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="com.arm.debug.cmsis.launch">
     <mapAttribute key="AverageDurationTracker">
-        <mapEntry key="*Fetching Data Model" value="137854"/>
-        <mapEntry key="*list global low level symbols" value="5075629"/>
-        <mapEntry key="AddEventObserver" value="285740"/>
+        <mapEntry key="*Fetching Data Model" value="407068"/>
+        <mapEntry key="*list global low level symbols" value="11357696"/>
+        <mapEntry key="*loading values from target" value="29873937"/>
+        <mapEntry key="*updating variables" value="3057395"/>
+        <mapEntry key="AddEventObserver" value="977958"/>
         <mapEntry key="Evaluate" value="622980"/>
-        <mapEntry key="areCachesAvailable" value="285791"/>
-        <mapEntry key="compute execution mode" value="322107"/>
-        <mapEntry key="continue" value="10368887"/>
-        <mapEntry key="core" value="2765000"/>
-        <mapEntry key="file" value="77928918"/>
-        <mapEntry key="get capabilities" value="268477"/>
-        <mapEntry key="get execution addresss" value="211524"/>
-        <mapEntry key="get source lines" value="326236"/>
-        <mapEntry key="getValidEncodings" value="263181"/>
-        <mapEntry key="initialize command help" value="39137138"/>
-        <mapEntry key="list breakpoint options" value="87791"/>
-        <mapEntry key="list breakpoints" value="182120"/>
-        <mapEntry key="list instruction sets" value="146617"/>
-        <mapEntry key="list signals" value="578136"/>
-        <mapEntry key="list watchpoint options" value="123197"/>
-        <mapEntry key="list watchpoints" value="225643"/>
-        <mapEntry key="load" value="7273825"/>
-        <mapEntry key="run script" value="8626978028"/>
-        <mapEntry key="set CWD" value="744125"/>
-        <mapEntry key="set debug-from" value="1014712"/>
-        <mapEntry key="start" value="64191688"/>
-        <mapEntry key="target reset" value="13314857"/>
-        <mapEntry key="waitForTargetToStop" value="20402047"/>
+        <mapEntry key="Retrieving globals list" value="17723825"/>
+        <mapEntry key="areCachesAvailable" value="354222"/>
+        <mapEntry key="break" value="10757543"/>
+        <mapEntry key="compute execution mode" value="929391"/>
+        <mapEntry key="continue" value="11073827752"/>
+        <mapEntry key="core" value="4757100"/>
+        <mapEntry key="file" value="174408485"/>
+        <mapEntry key="get capabilities" value="378851"/>
+        <mapEntry key="get execution addresss" value="711255"/>
+        <mapEntry key="get source lines" value="741732"/>
+        <mapEntry key="getValidEncodings" value="379470"/>
+        <mapEntry key="initialize command help" value="138287270"/>
+        <mapEntry key="list breakpoint options" value="623752"/>
+        <mapEntry key="list breakpoints" value="1026409"/>
+        <mapEntry key="list instruction sets" value="357584"/>
+        <mapEntry key="list signals" value="604359"/>
+        <mapEntry key="list watchpoint options" value="788874"/>
+        <mapEntry key="list watchpoints" value="546608"/>
+        <mapEntry key="load" value="6192652"/>
+        <mapEntry key="run script" value="10699560400"/>
+        <mapEntry key="set CWD" value="2329387"/>
+        <mapEntry key="set breakpoint properties" value="20218906"/>
+        <mapEntry key="set debug-from" value="1317025"/>
+        <mapEntry key="start" value="130737371"/>
+        <mapEntry key="target reset" value="33840143"/>
+        <mapEntry key="waitForTargetToStop" value="39400329"/>
     </mapAttribute>
     <stringAttribute key="CMSIS_DCORE" value="Cortex-M4"/>
     <stringAttribute key="CMSIS_EXE_FILE" value="${workspace_loc:/SERTS_Lab_9_ARM/Debug/SERTS_Lab_9_ARM.axf}"/>
@@ -98,7 +103,7 @@
     <booleanAttribute key="SWD" value="true"/>
     <booleanAttribute key="SWJ" value="true"/>
     <stringAttribute key="ULP_CONFIG" value="C:\Users\peter\Development Studio Workspace\.metadata\.plugins\com.arm.debug.cmsis\DS-MDK\STM32F4xx_DFP_STM32F407VGTx\ulp-config.txt"/>
-    <stringAttribute key="breakpoints" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;breakpoints order=&quot;ALPHA&quot;&gt;&#10;&lt;/breakpoints&gt;&#10;"/>
+    <stringAttribute key="breakpoints" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;breakpoints order=&quot;ALPHA&quot;&gt;&#10;&#9;&lt;breakpoint ignorecount=&quot;0&quot; threadenabled=&quot;no&quot; core_list=&quot;&quot; continue=&quot;no&quot; verboseBreakpoints=&quot;yes&quot; kind=&quot;SOURCEPOSITION&quot;&gt;&#10;&#9;&#9;&lt;master_location index=&quot;0&quot; enabled=&quot;true&quot; version=&quot;2&quot; hostFile=&quot;D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Lab_9_ARM\src\Thread.c&quot; line=&quot;146&quot;/&gt;&#10;&#9;&#9;&lt;location index=&quot;0&quot; enabled=&quot;true&quot; version=&quot;2&quot; address=&quot;0x0800241E&quot; debugFile=&quot;D:/Users/peter/Source/Repos/SERTS_Labs/SERTS_Lab_9_ARM/src/Thread.c&quot; hostFile=&quot;D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Lab_9_ARM\src\Thread.c&quot; line=&quot;146&quot;/&gt;&#10;&#9;&lt;/breakpoint&gt;&#10;&lt;/breakpoints&gt;&#10;"/>
     <listAttribute key="com.arm.debug.views.common.AddressTracker.debugger.view.DisassemblyView.addresses">
         <listEntry value="&lt;Next Instruction&gt;"/>
     </listAttribute>
@@ -132,7 +137,9 @@
     <stringAttribute key="debugger.view.NewRegisterView:DebugOutlineColumnState" value="OutlineConfig1&#9;8&#9;0&#9;true&#9;true&#9;56&#9;-1&#9;true&#9;1&#9;false&#9;true&#9;109&#9;-1&#9;true&#9;2&#9;true&#9;true&#9;52&#9;-1&#9;true&#9;3&#9;false&#9;true&#9;47&#9;-1&#9;true&#9;4&#9;false&#9;true&#9;56&#9;-1&#9;true&#9;5&#9;true&#9;true&#9;43&#9;-1&#9;true&#9;6&#9;false&#9;true&#9;74&#9;-1&#9;true&#9;7&#9;true&#9;true&#9;61&#9;-1&#9;true"/>
     <stringAttribute key="debugger.view.NewRegisterView:_selectedRegisterSet" value="All registers"/>
     <mapAttribute key="debugger.view.NewRegisterView_registerSets"/>
-    <stringAttribute key="debugger.view.VariableTreeView:DebugOutlineColumnState" value="OutlineConfig1&#9;8&#9;0&#9;true&#9;true&#9;178&#9;-1&#9;true&#9;1&#9;false&#9;true&#9;109&#9;-1&#9;true&#9;2&#9;true&#9;true&#9;118&#9;-1&#9;true&#9;3&#9;true&#9;true&#9;47&#9;-1&#9;true&#9;4&#9;true&#9;true&#9;56&#9;-1&#9;true&#9;5&#9;true&#9;true&#9;43&#9;-1&#9;true&#9;6&#9;true&#9;true&#9;74&#9;-1&#9;true&#9;7&#9;true&#9;true&#9;61&#9;-1&#9;true"/>
+    <stringAttribute key="debugger.view.VariableTreeView:DebugOutlineColumnState" value="OutlineConfig1&#9;8&#9;0&#9;true&#9;true&#9;178&#9;-1&#9;true&#9;1&#9;false&#9;true&#9;109&#9;-1&#9;true&#9;2&#9;true&#9;false&#9;264&#9;-1&#9;true&#9;3&#9;true&#9;true&#9;91&#9;-1&#9;true&#9;4&#9;true&#9;true&#9;56&#9;-1&#9;true&#9;5&#9;true&#9;true&#9;43&#9;-1&#9;true&#9;6&#9;true&#9;true&#9;98&#9;-1&#9;true&#9;7&#9;true&#9;true&#9;61&#9;-1&#9;true"/>
+    <listAttribute key="debugger.view.VariableTreeView:USER_ADDED_FILE_STATICS"/>
+    <listAttribute key="debugger.view.VariableTreeView:USER_ADDED_GLOBALS"/>
     <booleanAttribute key="debugger.view.register.DrawAsHex" value="false"/>
     <booleanAttribute key="debugger.view.variable.DrawAsHex" value="false"/>
     <stringAttribute key="dtsl_config" value="DtslScript_DebugAndOnChipTrace"/>
