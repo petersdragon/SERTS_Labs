@@ -1,34 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="com.arm.debug.cmsis.launch">
     <mapAttribute key="AverageDurationTracker">
-        <mapEntry key="*Fetching Data Model" value="367557"/>
-        <mapEntry key="*list global low level symbols" value="6665082"/>
-        <mapEntry key="AddEventObserver" value="598946"/>
-        <mapEntry key="break" value="10536800"/>
-        <mapEntry key="compute execution mode" value="452181"/>
-        <mapEntry key="continue" value="11593793"/>
-        <mapEntry key="file" value="67924220"/>
-        <mapEntry key="get capabilities" value="269749"/>
-        <mapEntry key="get execution addresss" value="361871"/>
-        <mapEntry key="get source lines" value="389819"/>
-        <mapEntry key="initialize command help" value="38550539"/>
-        <mapEntry key="interrupt" value="32582400"/>
-        <mapEntry key="list breakpoint options" value="146016"/>
-        <mapEntry key="list breakpoints" value="329910"/>
-        <mapEntry key="list instruction sets" value="385035"/>
-        <mapEntry key="list signals" value="415596"/>
-        <mapEntry key="list watchpoint options" value="268600"/>
-        <mapEntry key="list watchpoints" value="469724"/>
-        <mapEntry key="load" value="2452636"/>
-        <mapEntry key="remove" value="4282106"/>
-        <mapEntry key="run script" value="5171246173"/>
-        <mapEntry key="set CWD" value="1145497"/>
-        <mapEntry key="set breakpoint properties" value="9168200"/>
-        <mapEntry key="set debug-from" value="494598"/>
-        <mapEntry key="start" value="68583183"/>
-        <mapEntry key="target reset" value="19684164"/>
-        <mapEntry key="toggleBreakpoint" value="6964225"/>
-        <mapEntry key="waitForTargetToStop" value="22112705"/>
+        <mapEntry key="*Fetching Data Model" value="214600"/>
+        <mapEntry key="*list global low level symbols" value="6170625"/>
+        <mapEntry key="AddEventObserver" value="307300"/>
+        <mapEntry key="compute execution mode" value="314600"/>
+        <mapEntry key="continue" value="8060200"/>
+        <mapEntry key="file" value="85751700"/>
+        <mapEntry key="get capabilities" value="179550"/>
+        <mapEntry key="get execution addresss" value="438900"/>
+        <mapEntry key="get source lines" value="279000"/>
+        <mapEntry key="initialize command help" value="37977200"/>
+        <mapEntry key="list breakpoint options" value="72887"/>
+        <mapEntry key="list breakpoints" value="171350"/>
+        <mapEntry key="list instruction sets" value="143400"/>
+        <mapEntry key="list signals" value="262650"/>
+        <mapEntry key="list watchpoint options" value="119000"/>
+        <mapEntry key="list watchpoints" value="194500"/>
+        <mapEntry key="load" value="1947300"/>
+        <mapEntry key="run script" value="7870842700"/>
+        <mapEntry key="set CWD" value="1268000"/>
+        <mapEntry key="set debug-from" value="708900"/>
+        <mapEntry key="start" value="63886200"/>
+        <mapEntry key="target reset" value="15648650"/>
+        <mapEntry key="waitForTargetToStop" value="20674862"/>
     </mapAttribute>
     <stringAttribute key="CMSIS_DCORE" value="Cortex-M4"/>
     <stringAttribute key="CMSIS_EXE_FILE" value="${workspace_loc:/SERTS_Project_ARM/Debug/SERTS_Project_ARM.axf}"/>
