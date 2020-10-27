@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.arm.debug.cmsis.launch">
+    <mapAttribute key="AverageDurationTracker">
+        <mapEntry key="*Fetching Data Model" value="214600"/>
+        <mapEntry key="*list global low level symbols" value="6170625"/>
+        <mapEntry key="AddEventObserver" value="307300"/>
+        <mapEntry key="compute execution mode" value="314600"/>
+        <mapEntry key="continue" value="8060200"/>
+        <mapEntry key="file" value="85751700"/>
+        <mapEntry key="get capabilities" value="179550"/>
+        <mapEntry key="get execution addresss" value="438900"/>
+        <mapEntry key="get source lines" value="279000"/>
+        <mapEntry key="initialize command help" value="37977200"/>
+        <mapEntry key="list breakpoint options" value="72887"/>
+        <mapEntry key="list breakpoints" value="171350"/>
+        <mapEntry key="list instruction sets" value="143400"/>
+        <mapEntry key="list signals" value="262650"/>
+        <mapEntry key="list watchpoint options" value="119000"/>
+        <mapEntry key="list watchpoints" value="194500"/>
+        <mapEntry key="load" value="1947300"/>
+        <mapEntry key="run script" value="7870842700"/>
+        <mapEntry key="set CWD" value="1268000"/>
+        <mapEntry key="set debug-from" value="708900"/>
+        <mapEntry key="start" value="63886200"/>
+        <mapEntry key="target reset" value="15648650"/>
+        <mapEntry key="waitForTargetToStop" value="20674862"/>
+    </mapAttribute>
+    <stringAttribute key="CMSIS_DCORE" value="Cortex-M4"/>
+    <stringAttribute key="CMSIS_EXE_FILE" value="${workspace_loc:/SERTS_Project_ARM/Debug/SERTS_Project_ARM.axf}"/>
+    <booleanAttribute key="CMSIS_FLASHABLE" value="true"/>
+    <mapAttribute key="CMSIS_FLASH_ALG_0_DEFAULTS">
+        <mapEntry key="CMSIS_FLASH_ALG_0_FILE" value="STM32F4xx_OTP.FLM"/>
+        <mapEntry key="CMSIS_FLASH_ALG_0_IS_DEFAULT" value="false"/>
+        <mapEntry key="CMSIS_FLASH_ALG_0_RAM_SIZE" value="131072"/>
+        <mapEntry key="CMSIS_FLASH_ALG_0_RAM_START" value="536870912"/>
+        <mapEntry key="CMSIS_FLASH_ALG_0_REGION_SIZE" value="528"/>
+        <mapEntry key="CMSIS_FLASH_ALG_0_REGION_START" value="536836096"/>
+    </mapAttribute>
+    <stringAttribute key="CMSIS_FLASH_ALG_0_ERASE_METHOD" value="SECTORS"/>
+    <stringAttribute key="CMSIS_FLASH_ALG_0_FILE" value="STM32F4xx_1024.FLM"/>
+    <stringAttribute key="CMSIS_FLASH_ALG_0_FILE_PATH" value=""/>
+    <booleanAttribute key="CMSIS_FLASH_ALG_0_FORCE_PROGRAM" value="false"/>
+    <stringAttribute key="CMSIS_FLASH_ALG_0_IS_DEFAULT" value="true"/>
+    <booleanAttribute key="CMSIS_FLASH_ALG_0_PROGRAM" value="true"/>
+    <stringAttribute key="CMSIS_FLASH_ALG_0_RAM_SIZE" value="131072"/>
+    <stringAttribute key="CMSIS_FLASH_ALG_0_RAM_START" value="536870912"/>
+    <stringAttribute key="CMSIS_FLASH_ALG_0_REGION_SIZE" value="1048576"/>
+    <stringAttribute key="CMSIS_FLASH_ALG_0_REGION_START" value="134217728"/>
+    <booleanAttribute key="CMSIS_FLASH_ALG_0_VERFIY" value="true"/>
+    <mapAttribute key="CMSIS_FLASH_ALG_1_DEFAULTS">
+        <mapEntry key="CMSIS_FLASH_ALG_1_FILE" value="STM32F4xx_1024.FLM"/>
+        <mapEntry key="CMSIS_FLASH_ALG_1_IS_DEFAULT" value="true"/>
+        <mapEntry key="CMSIS_FLASH_ALG_1_RAM_SIZE" value="131072"/>
+        <mapEntry key="CMSIS_FLASH_ALG_1_RAM_START" value="536870912"/>
+        <mapEntry key="CMSIS_FLASH_ALG_1_REGION_SIZE" value="1048576"/>
+        <mapEntry key="CMSIS_FLASH_ALG_1_REGION_START" value="134217728"/>
+    </mapAttribute>
+    <mapAttribute key="CMSIS_FLASH_ALG_2_DEFAULTS">
+        <mapEntry key="CMSIS_FLASH_ALG_2_FILE" value="STM32F40xxx_41xxx_OPT.FLM"/>
+        <mapEntry key="CMSIS_FLASH_ALG_2_IS_DEFAULT" value="false"/>
+        <mapEntry key="CMSIS_FLASH_ALG_2_RAM_SIZE" value="131072"/>
+        <mapEntry key="CMSIS_FLASH_ALG_2_RAM_START" value="536870912"/>
+        <mapEntry key="CMSIS_FLASH_ALG_2_REGION_SIZE" value="4"/>
+        <mapEntry key="CMSIS_FLASH_ALG_2_REGION_START" value="536854528"/>
+    </mapAttribute>
+    <booleanAttribute key="CMSIS_FLASH_AS_CONNECT" value="true"/>
+    <booleanAttribute key="CMSIS_FLASH_SUPRESS" value="true"/>
+    <booleanAttribute key="CMSIS_LOAD_SYMBOLS_ONLY" value="false"/>
+    <stringAttribute key="CMSIS_PACK_NAME" value="STM32F4xx_DFP_STM32F407VGTx"/>
+    <stringAttribute key="CMSIS_PACK_VERSION" value="2.15.0"/>
+    <stringAttribute key="CMSIS_PNAME" value=""/>
+    <stringAttribute key="CMSIS_PREVIOUS_PRIMARY_FILE" value="D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Project_ARM\Debug\SERTS_Project_ARM.axf"/>
+    <stringAttribute key="CMSIS_PRIMARY_FILE" value="${workspace_loc:/SERTS_Project_ARM/Debug/SERTS_Project_ARM.axf}"/>
+    <stringAttribute key="CMSIS_PROJ" value="SERTS_Project_ARM"/>
+    <stringAttribute key="CMSIS_PROJECT_EXECUTABLE" value="${workspace_loc:/SERTS_Project_ARM/Debug/SERTS_Project_ARM.axf}"/>
+    <stringAttribute key="CMSIS_RESET_TYPE" value="reset.system"/>
+    <stringAttribute key="CMSIS_SDF_DIR" value="C:\Users\peter\Development Studio Workspace\.metadata\.plugins\com.arm.debug.cmsis\DS-MDK\STM32F4xx_DFP_STM32F407VGTx"/>
+    <stringAttribute key="CMSIS_SVD_DIR" value="C:\Users\peter\Development Studio Workspace\.metadata\.plugins\com.arm.debug.cmsis\DS-MDK\SVD\STM32F40x"/>
+    <listAttribute key="FILES.ICE_DEBUG">
+        <listEntry value="ON_DEMAND_LOAD"/>
+        <listEntry value="ALSO_LOAD_SYMBOLS"/>
+    </listAttribute>
+    <stringAttribute key="FILES.ICE_DEBUG.RESOURCES.0.OPTION.ALSO_LOAD_SYMBOLS" value="true"/>
+    <stringAttribute key="FILES.ICE_DEBUG.RESOURCES.0.OPTION.ON_DEMAND_LOAD" value="true"/>
+    <stringAttribute key="FILES.ICE_DEBUG.RESOURCES.0.TYPE" value="SYMBOLS_FILE"/>
+    <stringAttribute key="FILES.ICE_DEBUG.RESOURCES.0.VALUE" value="D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Project_ARM\Debug\SERTS_Project_ARM.axf"/>
+    <stringAttribute key="FILES.ICE_DEBUG.RESOURCES.1.TYPE" value="SFR_SEARCH_DIRS"/>
+    <stringAttribute key="FILES.ICE_DEBUG.RESOURCES.1.VALUE" value="C:\Users\peter\Development Studio Workspace\.metadata\.plugins\com.arm.debug.cmsis\DS-MDK\SVD\STM32F40x"/>
+    <intAttribute key="FILES.ICE_DEBUG.RESOURCES.COUNT" value="2"/>
+    <stringAttribute key="FILES.SELECTED_DEBUG_OPEATION" value="ICE_DEBUG"/>
+    <booleanAttribute key="KEY_COMMANDS_AFTER_CONNECT" value="false"/>
+    <booleanAttribute key="KEY_COMMANDS_AS_CONNECT" value="true"/>
+    <stringAttribute key="KEY_COMMANDS_AS_CONNECT_TEXT" value="reset reset.system&#13;&#10;flash load-multiple &quot;D:\Users\peter\Source\Repos\SERTS_Labs\SERTS_Project_ARM\Debug\SERTS_Project_ARM.axf&quot;"/>
+    <booleanAttribute key="SWD" value="true"/>
+    <booleanAttribute key="SWJ" value="true"/>
+    <stringAttribute key="ULP_CONFIG" value="C:\Users\peter\Development Studio Workspace\.metadata\.plugins\com.arm.debug.cmsis\DS-MDK\STM32F4xx_DFP_STM32F407VGTx\ulp-config.txt"/>
+    <stringAttribute key="breakpoints" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;breakpoints order=&quot;ALPHA&quot;&gt;&#10;&lt;/breakpoints&gt;&#10;"/>
+    <stringAttribute key="config_db_connection_keys" value="FILES.SELECTED_DEBUG_OPEATION rvi_address connection_type CMSIS_PROJ"/>
+    <stringAttribute key="config_db_connection_type" value="Bare Metal Debug"/>
+    <stringAttribute key="config_db_platform_name" value="STM32F4xx_DFP_STM32F407VGTx"/>
+    <stringAttribute key="config_db_project_type" value="Bare Metal Debug"/>
+    <stringAttribute key="config_db_project_type_id" value="BARE_METAL"/>
+    <stringAttribute key="config_file" value="C:\Users\peter\Development Studio Workspace\.metadata\.plugins\com.arm.debug.cmsis\DS-MDK\STM32F4xx_DFP_STM32F407VGTx\platform.sdf"/>
+    <booleanAttribute key="connectOnly" value="false"/>
+    <stringAttribute key="connection_type" value="ST-Link"/>
+    <booleanAttribute key="debugSequenceLogging" value="false"/>
+    <stringAttribute key="dtsl_config" value="DtslScript_DebugAndOnChipTrace"/>
+    <stringAttribute key="dtsl_config_script" value="C:\Users\peter\Development Studio Workspace\.metadata\.plugins\com.arm.debug.cmsis\DS-MDK\STM32F4xx_DFP_STM32F407VGTx\dtsl_config_script.py"/>
+    <stringAttribute key="dtsl_options_file" value=""/>
+    <booleanAttribute key="holdReset" value="false"/>
+    <intAttribute key="launch_configuration_version" value="3"/>
+    <stringAttribute key="os_extension_id" value="com.arm.debug.os.rtx"/>
+    <booleanAttribute key="preReset" value="false"/>
+    <stringAttribute key="rvi_address" value="066CFF485550755187133040"/>
+    <stringAttribute key="stopAtExpression" value="main"/>
+    <stringAttribute key="watchpoints" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;watchpoints&gt;&#10;&lt;/watchpoints&gt;&#10;"/>
+</launchConfiguration>
