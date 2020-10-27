@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SERTS_Lab_11_ARM/SERTS_Lab_10_ARM.rteconfig&apos; to &apos;SERTS_Lab_11_ARM.rteconfig&apos;" description="Rename resource &apos;SERTS_Lab_10_ARM.rteconfig&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="SERTS_Lab_10_ARM.rteconfig" name="SERTS_Lab_11_ARM.rteconfig" stamp="1603805662370" updateReferences="true"/>
+</session>
