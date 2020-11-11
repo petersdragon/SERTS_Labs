@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;SERTS_Lab_9_ARM&apos;" deleteContents="false" description="Delete resource &apos;SERTS_Lab_9_ARM&apos;" element1="/SERTS_Lab_9_ARM" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1602596578342"/>&#x0A;<refactoring comment="Delete resource &apos;SERTS_Lab_9_ARM/Debug/SERTS_Lab_9_ARM.axf&apos;" deleteContents="false" description="Delete resource &apos;SERTS_Lab_9_ARM/Debug/SERTS_Lab_9_ARM.axf&apos;" element1="/SERTS_Lab_9_ARM/Debug/SERTS_Lab_9_ARM.axf" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1602598398448"/>
+</session>
