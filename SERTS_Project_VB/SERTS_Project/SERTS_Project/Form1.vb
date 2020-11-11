@@ -11,6 +11,7 @@ Public Class Form1
     Dim ShowFilesStr As String = "1"
     Dim StartFileListStr As String = "2"
     Dim EndFileListStr As String = "3"
+    Dim SendFileName As String = "4"
 
     Dim StopButtonStr As String = "8"
     Dim ChangeStateButtonStr As String = "9"
@@ -94,6 +95,8 @@ Public Class Form1
     End Sub
 
     Private Sub playPauseButton_Click(sender As Object, e As EventArgs) Handles playPauseButton.Click
+        b(0) = 0
+        ' A value of negative one (-1) is returned if no item is selected
         If Not (filesList.SelectedIndex = -1) Then
             SerialPort1.Write(ChangeStateButtonStr, 0, 1)
         End If
@@ -107,5 +110,15 @@ Public Class Form1
 
     Private Sub selectedSongLabel_Click(sender As Object, e As EventArgs) Handles selectedSongLabel.Click
 
+    End Sub
+
+    Private Sub SelectButton_Click(sender As Object, e As EventArgs) Handles SelectButton.Click
+        b(0) = 0
+        ' A value of negative one (-1) is returned if no item is selected
+        If Not (filesList.SelectedIndex = -1) Then
+            SerialPort1.Write(SendFileName, 0, 1)
+            SerialPort1.Write(filesList.SelectedItem)
+            SerialPort1.Write(b, 0, 1) ' New Line character at the end of the string
+        End If
     End Sub
 End Class

@@ -23,8 +23,7 @@
 #define Stop_Song_char "8"
 #define Song_State_Change_char "9"
 
-#define MAX 256
-char fileName[MAX];
+int MAX = 256;
 
 // pointer to file type for files on USB device
 FILE *f;
@@ -92,6 +91,9 @@ osMessageQDef (CMDQueue, 1, uint32_t); // message queue object
 osMessageQId mid_FSQueue; // message queue for commands to Thread
 osMessageQDef (FSQueue, 1, uint32_t); // message queue object
 
+osMessageQId buffer_MsgQueue; // message queue for commands to Thread
+osMessageQDef (buffer_MsgQueue, 1, uint32_t); // message queue object
+
 void Process_Event(uint16_t event) {
 	static uint16_t Current_State = NoState; // Current state of the SM
 	switch(Current_State){
@@ -122,6 +124,7 @@ void Process_Event(uint16_t event) {
 			// Transition actions
 			// entry actions
 			LED_On(LED_Green);
+			osMessagePut (mid_FSQueue, PlaySong, osWaitForever);
 		}
 		break;
 
@@ -141,6 +144,8 @@ void Process_Event(uint16_t event) {
 			// Transition actions
 			// entry actions
 			LED_On(LED_Blue);
+			osMessagePut (mid_FSQueue, PauseSong, osWaitForever);
+
 		}
 		if(event == StopSong){
 			// Next State
@@ -150,6 +155,7 @@ void Process_Event(uint16_t event) {
 			// Transition actions
 			// entry actions
 			LED_On(LED_Red);
+			osMessagePut (mid_FSQueue, StopSong, osWaitForever);
 		}
 		break;
 	case Paused:
@@ -168,6 +174,7 @@ void Process_Event(uint16_t event) {
 			// Transition actions
 			// entry actions
 			LED_On(LED_Green);
+			osMessagePut (mid_FSQueue, PlaySong, osWaitForever);
 		}
 		if(event == StopSong){
 			// Next State
@@ -179,7 +186,6 @@ void Process_Event(uint16_t event) {
 			LED_On(LED_Red);
 		}
 		break;
-
 	default:
 		break;
 	}
@@ -197,6 +203,8 @@ void Init_Thread (void) {
 	if (!mid_CMDQueue)return; // Message Queue object not created, handle failure
 	mid_FSQueue = osMessageCreate (osMessageQ(FSQueue), NULL);  // create msg queue
 	if (!mid_FSQueue)return; // Message Queue object not created, handle failure
+	buffer_MsgQueue = osMessageCreate (osMessageQ(buffer_MsgQueue), NULL);  // create msg queue
+	if (!buffer_MsgQueue)return; // Message Queue object not created, handle failure
 
 	// Create threads
 	tid_RX_Command = osThreadCreate (osThread(Rx_Command), NULL);
@@ -223,17 +231,16 @@ void Control(void const *arg){
 
 void Rx_Command (void const *argument){
    char rx_char[2]={0,0};
-
+   char fileName[MAX];
    while(1){
       UART_receive(rx_char, 1); // Wait for command from PC GUI
-    // Check for the type of character received
+      // Check for the type of character received
       if(!strcmp(rx_char, Show_Files_char)){
          // Show_Files received
          osMessagePut (mid_CMDQueue, ListFiles, osWaitForever);
       }
       else if(!strcmp(rx_char, Read_Files_char)){
     	  UART_receivestring(fileName, MAX); // Read file name from GUI
-    	  int i = 0;
       }
       else if(!strcmp(rx_char, Stop_Song_char)){
     	  // Send Stop Command to State Machine
@@ -325,4 +332,3 @@ void FS_Thread(void const *arg){
 		}
 	} // end if USBH_Initialize
 }
-
