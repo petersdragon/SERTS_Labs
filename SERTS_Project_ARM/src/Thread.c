@@ -286,41 +286,11 @@ void FS_Thread(void const *arg){
 		while(1){
 			evt = osMessageGet (mid_FSQueue, osWaitForever); // receive command
 			if (evt.status == osEventMessage) { // check for valid message
-
-				switch(evt.value.v){
-					case ListFiles:
-						while (ffind("U0:*.wav", &drive_info) == fsOK) {
-							UART_send(drive_info.name, strlen(drive_info.name));
-							UART_send("\n", 1);
-						}
-						osMessagePut (mid_CMDQueue, SendComplete, osWaitForever);
-						break;
-					case PlaySong:
-						if(f != NULL){
-							fread((void *)&header, sizeof(header), 1, f);
-							rtrn = BSP_AUDIO_OUT_Init(OUTPUT_DEVICE_AUTO, 0x46, header.sample_rate);
-							if (rtrn != AUDIO_OK)return;
-
-							if(fread(&Audio_Buffer1, sizeof(uint16_t), BUF_LEN, f) > 0){
-								osMessagePut (buffer_MsgQueue, 2, osWaitForever);
-							}
-
-							// Start the audio player, size is number of bytes so mult. by 2
-							BSP_AUDIO_OUT_Play((uint16_t *)Audio_Buffer1, BUF_LEN*2);
-						}
-					case ResumeSong:
-						if(evt.value.v == ResumeSong){
-							BSP_AUDIO_OUT_SetMute(AUDIO_MUTE_OFF);
-							BSP_AUDIO_OUT_ChangeBuffer((uint16_t*)Audio_Buffer1, BUF_LEN);
-						}
-						break;
-					case PauseSong:
-
-						break;
-					case StopSong:
-
-						break;
+				while (ffind("U0:*.wav", &drive_info) == fsOK) {
+					UART_send(drive_info.name, strlen(drive_info.name));
+					UART_send("\n", 1);
 				}
+				osMessagePut (mid_CMDQueue, SendComplete, osWaitForever);
 			}
 		}
 	} // end if USBH_Initialize

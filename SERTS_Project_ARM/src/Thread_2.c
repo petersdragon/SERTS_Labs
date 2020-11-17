@@ -23,7 +23,8 @@
 #define Stop_Song_char "8"
 #define Song_State_Change_char "9"
 
-int MAX = 256;
+#define MAX 256
+char fileName[MAX];
 
 // pointer to file type for files on USB device
 FILE *f;
@@ -36,7 +37,6 @@ int16_t Audio_Buffer1[BUF_LEN];
 int16_t Audio_Buffer2[BUF_LEN];
 
 enum commands{
-	ListFiles,
 	SendComplete,
 	SendFiles,
 	StopSong,
@@ -94,6 +94,9 @@ osMessageQDef (FSQueue, 1, uint32_t); // message queue object
 osMessageQId buffer_MsgQueue; // message queue for commands to Thread
 osMessageQDef (buffer_MsgQueue, 1, uint32_t); // message queue object
 
+osSemaphoreDef(SEM0);
+osSemaphoreId(SEM_id);
+
 void Process_Event(uint16_t event) {
 	static uint16_t Current_State = NoState; // Current state of the SM
 	switch(Current_State){
@@ -109,7 +112,7 @@ void Process_Event(uint16_t event) {
 		break;
 
 	case Stopped:
-		if(event == ListFiles){
+		if(event == SendFiles){
 			// Next State
 			// Exit actions
 			// Transition actions
@@ -129,7 +132,7 @@ void Process_Event(uint16_t event) {
 		break;
 
 	case Playing:
-		if(event == ListFiles){
+		if(event == SendFiles){
 			// Next State
 			// Exit actions
 			// Transition actions
@@ -159,7 +162,7 @@ void Process_Event(uint16_t event) {
 		}
 		break;
 	case Paused:
-		if(event == ListFiles){
+		if(event == SendFiles){
 			// Next State
 			// Exit actions
 			// Transition actions
@@ -174,7 +177,7 @@ void Process_Event(uint16_t event) {
 			// Transition actions
 			// entry actions
 			LED_On(LED_Green);
-			osMessagePut (mid_FSQueue, PlaySong, osWaitForever);
+			osMessagePut (mid_FSQueue, ResumeSong, osWaitForever);
 		}
 		if(event == StopSong){
 			// Next State
@@ -197,6 +200,8 @@ void Init_Thread (void) {
 	
 	LED_Initialize(); // Initialize the LEDs
 	UART_Init(); // Initialize the UART
+
+	SEM_id = osSemaphoreCreate(osSemaphore(SEM0),0);
 
 	// Create queues
 	mid_CMDQueue = osMessageCreate (osMessageQ(CMDQueue), NULL);  // create msg queue
@@ -231,16 +236,16 @@ void Control(void const *arg){
 
 void Rx_Command (void const *argument){
    char rx_char[2]={0,0};
-   char fileName[MAX];
    while(1){
       UART_receive(rx_char, 1); // Wait for command from PC GUI
       // Check for the type of character received
       if(!strcmp(rx_char, Show_Files_char)){
          // Show_Files received
-         osMessagePut (mid_CMDQueue, ListFiles, osWaitForever);
+         osMessagePut (mid_CMDQueue, SendFiles, osWaitForever);
       }
       else if(!strcmp(rx_char, Read_Files_char)){
     	  UART_receivestring(fileName, MAX); // Read file name from GUI
+    	  int i = 0;
       }
       else if(!strcmp(rx_char, Stop_Song_char)){
     	  // Send Stop Command to State Machine
@@ -289,13 +294,14 @@ void FS_Thread(void const *arg){
 			return;	// handle the error, fmount didn't work
 		} // end if
 		// file system and drive are good to go
+		rtrn = BSP_AUDIO_OUT_Init(OUTPUT_DEVICE_AUTO, 0x46, 44100);
 
 		while(1){
 			evt = osMessageGet (mid_FSQueue, osWaitForever); // receive command
 			if (evt.status == osEventMessage) { // check for valid message
 
 				switch(evt.value.v){
-					case ListFiles:
+					case SendFiles:
 						while (ffind("U0:*.wav", &drive_info) == fsOK) {
 							UART_send(drive_info.name, strlen(drive_info.name));
 							UART_send("\n", 1);
@@ -303,9 +309,9 @@ void FS_Thread(void const *arg){
 						osMessagePut (mid_CMDQueue, SendComplete, osWaitForever);
 						break;
 					case PlaySong:
+						f = fopen(fileName, "r");
 						if(f != NULL){
 							fread((void *)&header, sizeof(header), 1, f);
-							rtrn = BSP_AUDIO_OUT_Init(OUTPUT_DEVICE_AUTO, 0x46, header.sample_rate);
 							if (rtrn != AUDIO_OK)return;
 
 							if(fread(&Audio_Buffer1, sizeof(uint16_t), BUF_LEN, f) > 0){
@@ -314,21 +320,71 @@ void FS_Thread(void const *arg){
 
 							// Start the audio player, size is number of bytes so mult. by 2
 							BSP_AUDIO_OUT_Play((uint16_t *)Audio_Buffer1, BUF_LEN*2);
-						}
+						} // @suppress("No break at end of case")
 					case ResumeSong:
 						if(evt.value.v == ResumeSong){
 							BSP_AUDIO_OUT_SetMute(AUDIO_MUTE_OFF);
+							//The audio buffer has data when the song is paused, why does it not play?
 							BSP_AUDIO_OUT_ChangeBuffer((uint16_t*)Audio_Buffer1, BUF_LEN);
 						}
+						bool keepPlaying = true;
+						//The problem is that after this thing resumes, it does not go ba into the loop
+						while(fread(&Audio_Buffer2, sizeof(uint16_t), BUF_LEN, f) > 0 & keepPlaying){ // read data from file into Audio_Buffer2 while not end of file
+							osMessagePut (buffer_MsgQueue, 2, osWaitForever); // Send Message
+							osSemaphoreWait(SEM_id, osWaitForever);
+
+							if (fread(&Audio_Buffer1, sizeof(uint16_t), BUF_LEN, f) > 0){// read data from file into Audio_Buffer while not end of file
+								osMessagePut (buffer_MsgQueue, 1, osWaitForever); // Send Message
+								osSemaphoreWait(SEM_id, osWaitForever);
+							}
+							evt = osMessageGet (mid_FSQueue, 10); // receive command
+							if (evt.status == osEventMessage){
+								if (evt.value.v == PauseSong){
+									BSP_AUDIO_OUT_SetMute(AUDIO_MUTE_ON);
+									break; // This is not good programming but works
+								}
+								else if (evt.value.v == StopSong){
+									keepPlaying = false;
+								}
+							}
+						}
+						BSP_AUDIO_OUT_SetMute(AUDIO_MUTE_ON);
+						//fclose(f);
 						break;
 					case PauseSong:
-
+						BSP_AUDIO_OUT_SetMute(AUDIO_MUTE_ON);
 						break;
 					case StopSong:
-
+						BSP_AUDIO_OUT_SetMute(AUDIO_MUTE_ON);
+						fclose(f);
 						break;
 				}
 			}
-		}
+		}// end while(1)
 	} // end if USBH_Initialize
+}
+
+/* User Callbacks: user has to implement these functions if they are needed. */
+/* This function is called when the requested data has been completely transferred. */
+void    BSP_AUDIO_OUT_TransferComplete_CallBack(void){
+	uint16_t msg;
+		msg = osMessageGet (buffer_MsgQueue, 0).value.v;
+		if(msg == 2){
+			BSP_AUDIO_OUT_ChangeBuffer((uint16_t*)Audio_Buffer2, BUF_LEN);
+		}
+		else if(msg == 1){
+			BSP_AUDIO_OUT_ChangeBuffer((uint16_t*)Audio_Buffer1, BUF_LEN);
+		}
+		osSemaphoreRelease(SEM_id);
+}
+
+/* This function is called when half of the requested buffer has been transferred. */
+void    BSP_AUDIO_OUT_HalfTransfer_CallBack(void){
+}
+
+/* This function is called when an Interrupt due to transfer error or peripheral
+   error occurs. */
+void    BSP_AUDIO_OUT_Error_CallBack(void){
+		while(1){
+		}
 }

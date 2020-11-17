@@ -86,7 +86,6 @@ Public Class Form1
     End Sub
     Private Sub filesList_SelectedIndexChanged(sender As Object, e As EventArgs) Handles filesList.SelectedIndexChanged
         If Not (filesList.SelectedIndex = -1) Then
-            selectedSongLabel.Text = filesList.SelectedItem
         End If
     End Sub
 
@@ -116,6 +115,7 @@ Public Class Form1
         b(0) = 0
         ' A value of negative one (-1) is returned if no item is selected
         If Not (filesList.SelectedIndex = -1) Then
+            selectedSongLabel.Text = filesList.SelectedItem
             SerialPort1.Write(SendFileName, 0, 1)
             SerialPort1.Write(filesList.SelectedItem)
             SerialPort1.Write(b, 0, 1) ' New Line character at the end of the string
